@@ -1,0 +1,183 @@
+header{
+    position: fixed;
+    width: 100%;
+    color: white;
+    display: flex;
+    height: 100px;
+    transition: 0.8s;
+    display: flex;
+    z-index: 9999;
+    
+}
+/* classe ativar menu */
+.active{ 
+    transform: translateX(0);
+    opacity: 1;
+}
+.scroll{
+    backdrop-filter: blur(15px);
+    height: 70px;
+    background-color: rgba(0,0,0, 0.5);
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.menu .logo{
+    font-size: 1.56rem;
+    font-weight: 700;
+    font-style: bold;
+    padding: 20px;
+    color: var(--cor-primaria);
+}
+.rede-sociais{
+    display: flex;
+    gap: 12px;
+    padding-right: 20px;
+}
+.rede-sociais i{
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rede-sociais i:hover{
+   color: var(--cor-primaria);
+   transform: scale(1.2);
+}
+.list-menu{
+    display: flex;
+    gap: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+    padding: 20px;
+}
+.list-menu li{
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+.list-menu a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+.list-menu a:hover{
+    color: var(--cor-primaria);
+}
+.list-menu li::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-primaria);
+    visibility: hidden;
+    transition: all 0.5s ease-in-out 0s;
+}
+.list-menu li:hover:before{
+    visibility: visible;
+    width: 100%;
+}
+
+
+/*botao*/
+.hamberger{
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    transition: 0.5s;
+    z-index: 99;
+    display: none;
+}
+.linha{
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    margin: 6px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.7s;
+    
+}
+
+button.ativar .linha:nth-child(1){
+    transform: translateY(10px) rotate(-40deg);
+}
+button.ativar .linha:nth-child(2){
+    opacity: 0;
+}
+button.ativar .linha:nth-child(3){
+    transform: translateY(-8px) rotate(40deg);
+}
+/*fim botao*/
+/* mobile-menu */
+
+/* Responsivo */
+
+@media screen and (max-width:900px){
+    .menu{
+        align-items: normal;
+    }
+    .menu a{
+        padding-top: 20px;
+    }
+    .list-menu{
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0,0,0, 0.9);
+        height: 100vh;
+        width: 60%;       
+        gap: 30px;
+        padding-top: 70px;
+        font-size: 1.3rem;
+        opacity: 0;
+        transform: translateX(1000px);
+        transition: transform 1s;
+        z-index: 89;
+        
+        
+    }
+    .rede-sociais{
+        display: none;
+    }
+    .list-menu li{
+        width: 100%;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+    }
+    .list-menu li a{
+        padding: 0 auto;
+    }
+    .active{ 
+        transform: translateX(0);
+        opacity: 1;
+        display: flex;
+        
+    }
+    .hamberger{
+        display: block;
+    }
+       
+}
+@media screen and (max-width:450px){
+    .menu .logo{
+        font-size: 1.4rem;
+        padding: 20px 0 0 10px;
+        font-weight: 700;
+        font-style: bold;
+    }
+}

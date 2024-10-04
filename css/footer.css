@@ -1,0 +1,96 @@
+footer{
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+.footer p{
+    text-align: center;
+}
+.rede-sociais-footer{
+    display: flex;
+    gap: 10px;
+}
+.rede-sociais-footer i{
+    color: white;
+    font-size: 1.8rem;
+}
+.img-footer{
+    margin-top: -20px;
+    max-width: 200px;
+    max-height: 180px;
+    
+}
+.footer img{
+    width: 100%;
+    height: 100%;
+}
+/* seta */
+.whats{
+    opacity: 0;
+    transform: translateX(200px);
+}
+.ativar-whats{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #25D366;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition:0.8s ease-in-out;;
+    opacity: 1;
+    transform: translateX(0);
+}
+.ativar-whats::after{
+    content: "Fale comigo!";
+    position: absolute;
+    left: -120px;
+    font-size: .9rem;
+    background: var(--cor-primaria);
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.ativar-whats:hover::after{
+    opacity: 1;
+}
+/* topo */
+.topo{
+    opacity: 0;
+}
+.topo-ativo{
+    position: fixed;
+    top: 80px;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+    padding: 4px 8px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+    opacity: 1;
+    display: none;
+}
+@media screen and (max-width:860px){
+    .topo-ativo{
+        display: block;
+    }
+}
