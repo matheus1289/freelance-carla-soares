@@ -156,6 +156,9 @@ button.ativar .linha:nth-child(3){
         
         
     }
+    .list-menu li::before{
+        display: none;
+    }
     .rede-sociais{
         display: none;
     }
