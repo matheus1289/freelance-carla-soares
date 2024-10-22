@@ -1,9 +1,9 @@
 header{
     position: fixed;
+    height: 70px;
     width: 100%;
     color: white;
     display: flex;
-    height: 100px;
     transition: 0.8s;
     display: flex;
     z-index: 9999;
@@ -16,7 +16,6 @@ header{
 }
 .scroll{
     backdrop-filter: blur(15px);
-    height: 70px;
     background-color: rgba(0,0,0, 0.5);
 }
 .menu{
@@ -28,12 +27,13 @@ header{
     
 }
 .menu .logo{
-    font-size: 1.56rem;
+    font-size: 1.6rem;
     font-weight: 700;
     font-style: bold;
     padding: 20px;
     color: var(--cor-primaria);
 }
+
 .rede-sociais{
     display: flex;
     gap: 12px;
@@ -121,6 +121,14 @@ button.ativar .linha:nth-child(2){
 button.ativar .linha:nth-child(3){
     transform: translateY(-8px) rotate(40deg);
 }
+.img-topo{
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+.img-topo img{
+    width: 100%;
+}
 /*fim botao*/
 /* mobile-menu */
 
@@ -136,11 +144,10 @@ button.ativar .linha:nth-child(3){
     .list-menu{
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0,0,0, 0.9);
+        background-color: black;
         height: 100vh;
         width: 60%;       
         gap: 30px;
-        padding-top: 70px;
         font-size: 1.3rem;
         opacity: 0;
         transform: translateX(1000px);
@@ -153,10 +160,9 @@ button.ativar .linha:nth-child(3){
         display: none;
     }
     .list-menu li{
-        width: 100%;
+        width: 50%;
         padding-bottom: 5px;
-        border-bottom: 2px solid white;
-        width: 100%;
+        
         text-align: center;
     }
     .list-menu li a{
@@ -166,11 +172,17 @@ button.ativar .linha:nth-child(3){
         transform: translateX(0);
         opacity: 1;
         display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0;
         
     }
-    .hamberger{
+    .hamberger, .img-topo{
         display: block;
     }
+   
        
 }
 @media screen and (max-width:450px){
