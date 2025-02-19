@@ -1,6 +1,5 @@
 header{
     position: fixed;
-    height: 70px;
     width: 100%;
     color: white;
     display: flex;
@@ -24,20 +23,19 @@ header{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 90px;
     
 }
-.menu .logo{
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-style: bold;
-    padding: 20px;
-    color: var(--cor-primaria);
+.menu .logo img{
+    width: 150px;
+    margin-top: 15px;
 }
 
 .rede-sociais{
     display: flex;
     gap: 12px;
     padding-right: 20px;
+    
 }
 .rede-sociais i{
     font-size: 1.8rem;
@@ -75,6 +73,7 @@ header{
     width: 0;
     height: 3px;
     bottom: -3px;
+    border-radius: 4px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--cor-primaria);
